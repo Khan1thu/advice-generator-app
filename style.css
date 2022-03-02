@@ -36,7 +36,7 @@ button {
   border: 0px;
   position: absolute;
   bottom: -55px;
-  left: 225px;
+  left: 226px;
   background-image: url("./images/icon-dice.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -44,6 +44,11 @@ button {
   background-color: var(--neon_green);
   cursor: pointer;
   opacity: 100;
+}
+
+button:hover {
+  transform: rotate(90deg);
+  background-color: red;
 }
 
 body {
@@ -63,14 +68,43 @@ body {
   background-color: var(--dark_grayish_blue);
   border: 1px solid var(--dark_grayish_blue);
   border-radius: 15px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 50px 30px 50px 30px;
   position: relative;
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--light_cyan);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 0.7rem;
+    color: var(--neon_green);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 70%;
+  }
   .container {
-    width: 80%;
+    height: 200px;
+    max-width: 250px;
+    padding: 20px 20px 50px 20px;
+  }
+
+  button {
+    position: absolute;
+    bottom: -55px;
+    left: 117px;
   }
 }
